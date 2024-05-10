@@ -61,7 +61,7 @@ const MainComp = () => {
             <div className="greet mx-0 mb-[50px] text-[#c4c7c5] p-[20px] font-semibold text-6xl">
               <p>
                 <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent ">
-                  Hello Geeks,
+                  Hello Boka Bajaj,
                 </span>
               </p>
               <p className="mt-2">How can I help you today?</p>
