@@ -13,6 +13,8 @@ import Card from "./Card";
 import { useContext } from "react";
 import { Context } from "../context/Context";
 
+import bajaj from "../assets/img/bajaj.jpg";
+
 const MainComp = () => {
   const {
     onSent,
@@ -53,7 +55,7 @@ const MainComp = () => {
         <p className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold">
           Boka.AI
         </p>
-        <img src={user} alt="user" width={50} className="rounded-full" />
+        <img src={bajaj} alt="user" width={50} className="rounded-full" />
       </div>
       <div className="main-container w-[900px] mx-auto">
         {!showResult ? (
