@@ -51,7 +51,7 @@ const MainComp = () => {
     <div className="main flex-1 min-h-[100vh] relative">
       <div className="nav flex items-center justify-between text-[22px] px-8 pt-3 text-[#585858]">
         <p className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold">
-          Pie.AI
+          Boka.AI
         </p>
         <img src={user} alt="user" width={50} className="rounded-full" />
       </div>
