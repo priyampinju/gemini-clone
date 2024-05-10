@@ -27,7 +27,8 @@ const MainComp = () => {
   const cardContent = [
     {
       id: 1,
-      para: "Suggest beautiful places to see on an upcoming road trip",
+      // para: "Suggest beautiful places to see on an upcoming road trip",
+      para: "Khusbu Bajaj thoda bkl hai kya? Boka..",
       icon: compass,
     },
     {
