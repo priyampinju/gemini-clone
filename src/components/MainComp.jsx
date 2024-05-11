@@ -55,9 +55,9 @@ const MainComp = () => {
         <p className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold">
           Boka.AI
         </p>
-        <img src={bajaj} alt="user" width={50} className="rounded-full" />
+        <img src={bajaj} alt="user" width={45} className="rounded-full" />
       </div>
-      <div className="main-container w-[900px] mx-auto">
+      <div className="main-container w-[900px] mx-auto mt-8">
         {!showResult ? (
           <>
             <div className="greet mx-0 mb-[50px] text-[#c4c7c5] p-[20px] font-semibold text-6xl">
@@ -76,9 +76,9 @@ const MainComp = () => {
           </>
         ) : (
           <div className="result py-0 px-3 max-h-[73vh] overflow-y-scroll">
-            <div className="result-title my-5 mx-0">
+            <div className="result-title mt-5 mb-10 mx-0 flex gap-5">
               <img
-                src={user}
+                src={bajaj}
                 alt="user"
                 width={70}
                 className="w-10 rounded-full"
@@ -86,8 +86,23 @@ const MainComp = () => {
               <p className="mt-4">{recentPrompt}</p>
             </div>
             <div className="result-data flex items-start gap-5">
-              <img src={brain} alt="ndnd" width={70} />
-              <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+              <img
+                src={brain}
+                alt="ndnd"
+                width={70}
+                className="w-10 rounded-full"
+              />
+
+              {loading ? (
+                <div className="loader w-full flex flex-col gap-2 ">
+                  Loading...
+                </div>
+              ) : (
+                <p
+                  dangerouslySetInnerHTML={{ __html: resultData }}
+                  className="text-base font-normal leading-7"
+                ></p>
+              )}
             </div>
           </div>
         )}

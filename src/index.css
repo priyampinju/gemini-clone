@@ -3,7 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
 
 .result::-webkit-scrollbar {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
 }
