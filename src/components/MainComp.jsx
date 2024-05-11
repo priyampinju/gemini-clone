@@ -24,6 +24,7 @@ const MainComp = () => {
     resultData,
     setInput,
     input,
+    newChat,
   } = useContext(Context);
 
   const cardContent = [
@@ -51,11 +52,14 @@ const MainComp = () => {
   ];
   return (
     <div className="main flex-1 min-h-[100vh] w-[100%]relative">
-      <div className="nav flex items-center justify-between text-[22px] px-8 pt-3 text-[#585858] w-[95%]">
-        <p className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold text-lg sm:text-base">
+      <div className="nav flex items-center justify-between text-[22px] px-8 pt-3 text-[#585858] w-[100%]">
+        <p
+          className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold text-lg sm:text-base"
+          onClick={() => newChat()}
+        >
           Boka.AI
         </p>
-        <img src={bajaj} alt="user" width={45} className="rounded-full " />
+        <img src={bajaj} alt="user" className="rounded-full w-7 md:w-12" />
       </div>
       <div className="main-container w-[100%] sm:w-[900px] mx-auto mt-8">
         {!showResult ? (
