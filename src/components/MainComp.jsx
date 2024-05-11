@@ -51,16 +51,16 @@ const MainComp = () => {
   ];
   return (
     <div className="main flex-1 min-h-[100vh] w-[100%]relative">
-      <div className="nav flex items-center justify-between text-[22px] px-8 pt-3 text-[#585858]">
-        <p className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold">
+      <div className="nav flex items-center justify-between text-[22px] px-8 pt-3 text-[#585858] w-[95%]">
+        <p className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold text-lg sm:text-base">
           Boka.AI
         </p>
-        <img src={bajaj} alt="user" width={45} className="rounded-full" />
+        <img src={bajaj} alt="user" width={45} className="rounded-full " />
       </div>
-      <div className="main-container w-[900px] mx-auto mt-8">
+      <div className="main-container w-[100%] sm:w-[900px] mx-auto mt-8">
         {!showResult ? (
           <>
-            <div className="greet mx-0 mb-[50px] text-[#c4c7c5] p-[20px] font-semibold text-6xl">
+            <div className="greet mx-0 mb-[50px] text-[#c4c7c5] p-[20px] font-semibold text-2xl md:text-6xl">
               <p>
                 <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent ">
                   Hello Boka Bajaj,
@@ -68,7 +68,7 @@ const MainComp = () => {
               </p>
               <p className="mt-2">How can I help you today?</p>
             </div>
-            <div className="cards grid grid-cols-4 gap-[15px] px-[10px] pt-6">
+            <div className="cards flex flex-col md:grid gap-4 md:grid-cols-4 md:gap-[15px] md:px-[10px] pt-6">
               {cardContent.map((item) => (
                 <Card key={item.id} para={item.para} icon={item.icon} />
               ))}
@@ -107,7 +107,7 @@ const MainComp = () => {
           </div>
         )}
 
-        <div className="main-bottom absolute bottom-10 w-full max-w-4xl py-0 px-5 m-auto">
+        <div className="main-bottom md:absolute md:bottom-10 w-full max-w-4xl py-2 md:py-0 px-0 m-auto">
           <div className="search-box flex items-center justify-between gap-5 bg-[#f0f4f9] py-2 px-5 rounded-[50px]">
             <input
               onChange={(e) => setInput(e.target.value)}
@@ -116,7 +116,7 @@ const MainComp = () => {
               placeholder="Enter a prompt here"
               className="bg-transparent outline-none w-[70vw] text-[#585858]"
             />
-            <div className="flex gap-5 items-center">
+            <div className="flex gap-5 pr-2 items-center ">
               <img
                 src={image}
                 alt="image"
@@ -130,19 +130,18 @@ const MainComp = () => {
                 className="opacity-40 hover:opacity-70"
               />
 
-              <div className="w-[5vw] hover:bg-[#ffffff] rounded-full p-2">
-                <img
-                  src={send}
-                  alt="send"
-                  onClick={() => onSent()}
-                  className="cursor-pointer hover:scale-110"
-                  width={25}
-                />
-              </div>
+              {/* <div className="w-[10vw] md:w-[5vw] hover:bg-[#ffffff] rounded-full p-1 md:p-2"> */}
+              <img
+                src={send}
+                alt="send"
+                onClick={() => onSent()}
+                className="cursor-pointer md:hover:scale-110 w-4 "
+              />
+              {/* </div> */}
             </div>
           </div>
         </div>
-        <div className="bottom-info absolute bottom-2 w-[900px] flex justify-center text-xs">
+        <div className="bottom-info px-5 md:px-0 md:absolute md:bottom-2 w-[100%] md:w-[900px] flex justify-center text-xs">
           <p>
             Pie.AI may provide inaccurate response being an AI. Please double
             check the responses. Thank you

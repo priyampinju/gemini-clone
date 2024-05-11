@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Card = ({ para, icon }) => {
   return (
-    <div className="h-[150px] p-[15px] bg-[#f0f4f9] rounded-xl relative cursor-pointer hover:bg-[#dfe4ea]">
+    <div className="h-[20vh] md:h-[150px] p-[15px] bg-[#f0f4f9] rounded-xl relative cursor-pointer hover:bg-[#dfe4ea] w-[90vw] md:w-auto  mx-auto">
       <p className="text-[#585858] text-lg">{para}</p>
       <img
         src={icon}
